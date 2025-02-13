@@ -1,8 +1,13 @@
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
+from dotenv import load_dotenv
+import os
 
-DATABASE_URI = 'postgresql+psycopg2://postgres:intelbras@localhost:5432/paises'
+load_dotenv()
+database_url = os.getenv('URL_DB')
+
+DATABASE_URI = database_url
 engine = create_engine(DATABASE_URI)
 
 Session = sessionmaker(bind=engine)

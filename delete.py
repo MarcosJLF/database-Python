@@ -1,7 +1,7 @@
 from model import Pais, Estado, session
 
 try:
-    pais = session.query(Pais).filter(Pais.nome == 'brasil').first()
+    pais = session.query(Pais).filter(Pais.nome == 'Rusia').first()
     session.delete(pais)
     session.commit()
     print('Pais deletado com sucesso')

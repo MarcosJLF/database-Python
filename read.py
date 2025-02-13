@@ -17,7 +17,6 @@ def pais(nome):
     print(pais.nome, pais.sigla, pais.populacao, pais.data_atualizacao)
 
 
-pais('Brasil')
-
+pais('brasil')
 
 session.close()
